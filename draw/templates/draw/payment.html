@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container-fluid{
+        background-color: rgb(194, 194, 194) ;
+        height: 600px;
+    }
+   .container-fluid button{
+    width: 80%;
+    height: 50px;
+    background-color: darkgrey;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+
+        
+
+
+    }
+    .dop{
+        height: 200px;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="dop"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10"><button><a href="{% url 'draw:card' %}">Upi</a></button></div><br>
+            <button><a href=""></a>Cash on delivery</button>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+</html>

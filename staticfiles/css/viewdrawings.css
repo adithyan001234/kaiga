@@ -1,0 +1,9 @@
+.container-fluid{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(149, 89, 205);
+}
+.button{
+    color: white;
+
+}

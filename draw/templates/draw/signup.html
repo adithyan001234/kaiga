@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .containerfluid{
+        width: 100%;
+        height: 498px;
+    }
+    .main table{
+        margin-left: 480px;
+        background-color: black;
+        opacity: .6;
+        width: 250px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 40px;
+        font-weight: bold;
+        margin-top: -40px;
+    }
+    #judd{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        align-items: center;
+        color: black;
+        background-color: white;
+        border-radius: 20px;
+    }
+    .main{
+        height: 112px;
+    }
+    .nav{
+        height: 250px;
+    }
+    .bar{
+        height: 300px;
+    }
+    .main h1{
+        text-align: center;
+        font-size: 90px;
+        margin-top: -60px;
+        
+
+    }
+</style>
+<body>
+    <div class="container-fluid" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL144j-Kg2fFw3C3dEKFAuwzgdwLj456zvyzq02-dFc65Ovf2BGWKy07O8IvOXgDXsRfE&usqp=CAU);width:auto;">
+        
+        <div class="nav">
+           
+    </div>
+        <div class="main" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL144j-Kg2fFw3C3dEKFAuwzgdwLj456zvyzq02-dFc65Ovf2BGWKy07O8IvOXgDXsRfE&usqp=CAU);">
+         
+            <table>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <h1>seller login</h1>
+                <tr>
+                    
+                    <td><input type="text" name="username" id="" placeholder="create username"></td>
+                </tr>
+                <tr>
+                    <td> <input type="password" name="password" id="" placeholder="create a password"></td>
+                </tr>
+                <tr>
+                    <td> <input type="password" name="" id="" placeholder="confirm the password"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="judd">Register as a seller</button></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </div>
+    <div class="bar" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL144j-Kg2fFw3C3dEKFAuwzgdwLj456zvyzq02-dFc65Ovf2BGWKy07O8IvOXgDXsRfE&usqp=CAU);"></div>
+  
+    
+        
+       
+       
+        
+  
+</body>
+</html>

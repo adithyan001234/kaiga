@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+</head>
+
+<style>
+    .container-fluid{
+        height: 600px;
+        background-color: rgb(194, 194, 194);
+    }
+    #hyre{
+        color: white;
+        background-color: rgb(95, 94, 94);
+        width: 80px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .container-fluid table td{
+
+       
+        font-weight: bold;
+    }
+    .container-fluid table{
+        color: white;
+        width: fit-content;
+    
+        background-color: rgb(0, 0, 0);
+        opacity: .5;
+        border-radius: 5px;
+        border: 5px solid rgb(130, 130, 130);
+    }
+    #hoppp{
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <div class="container-fluid" style="background-image: url(https://img.freepik.com/premium-vector/beautiful-hand-draw-landscape-with-mountain-sketch-vector-design_614983-4342.jpg?size=626&ext=jpg&ga=GA1.1.845443400.1706855433&semt=ais);">
+        <h1 style="color:rgb(74, 73, 73);" id="hoppp">Sign UP</h1>
+    <form action="" onsubmit="return sign()" method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td> <label for=""><br>name</label></td>
+                <td><input type="text" class="" id="name1" name="name" ><br></td>
+            </tr>
+            <tr>
+                <td>  <label for="">email</label></td>
+                <td><input type="email" class="" id="email" name="email"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="">password</label></td>
+                <td><input type="password" class="" id="password" name="password"><br></td>
+            </tr>
+            <tr>
+                <td> <label for="">conform password</label></td>
+                <td>  <input type="password" class="" id="cpassword"><br></td>
+            </tr>
+            <tr>
+                <td> <p id="message" style="color: red;"></p></td>
+            </tr>
+            <tr>
+                <td>  <button type="submit" id="hyre">submit</button></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    
+
+
+    <script src="{% static 'script/sign.js' %}"></script>
+
+</body>
+</html>

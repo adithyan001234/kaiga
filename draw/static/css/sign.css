@@ -1,0 +1,23 @@
+.container-fluid{
+    width: 100%;
+    height: 600x;
+    background-color: rgb(203, 203, 203);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.container-fluid h1{
+    font-weight: 900;
+    color: darkgrey;
+}
+.table{
+    size: 100px;
+}
+#hyre{
+    color: white;
+    background-color: rgb(121, 119, 119);
+}

@@ -1,0 +1,168 @@
+{% extends 'draw/navbar.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+{% block content %}
+<style>
+    
+    .container-fluid table{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .container-fluid{
+        background-color:  rgb(194, 194, 194);
+        width: 100%;
+        height: 500%;
+    }
+    .container-fluid button{
+        border-radius: 30px;
+    }
+    
+    #hooy{
+        width: 150px;
+        height: 100px;
+    }
+    #hyoo{
+        width: 150px;
+        height: 100px;
+        text-align: center;
+    }
+    #euuup{
+        width: 30px;
+        height: 100px;
+    }
+    #huee{
+        width: 30px;
+        text-align: center;
+    }
+    #huee1{
+        text-align: center;
+    }
+    #ytr{
+        width: 100px;
+        text-align: center;
+        margin-left: 100px;
+    }
+    #hyo{
+        width: 30px;
+        text-align: center;
+
+    }
+    #ytrrr{
+        width: 100px;
+        text-align: left;
+        margin-left: 40px;
+    }
+    #remm{
+        margin-left: 70px;
+    }
+    .footer{
+        background-color: rgb(0, 0, 0);
+    }
+    .footer a{
+        text-decoration: none;
+        color: white;
+    }
+    #gggiii{
+        text-decoration: none;
+        background-color: darkgray;
+        color: white;
+        width: 80px;
+        margin-right: 300px;
+        text-decoration: none;
+        width: 100px;
+    }
+    #ytyt{
+        text-decoration: none;
+        color: white;
+        
+    }
+    
+</style>
+<body>
+
+    <div class="container-fluid" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRD90xyGRlhv6eBHRhMa2U9c0HpcP5KXvtwpLoQYo3aMR7hvd9bSnO-FaCvltDqSbGvNg&usqp=CAU);">
+       
+
+        <table>
+            <tr>
+                <td>drawing</td>
+                <td id="hyo">name</td>
+                <td>discriptions</td>
+                
+              
+                <td id="huee1">quantity</td>
+
+
+                <td id="ytr">price</td>
+                
+            </tr>
+            {% for item in cart_items %}
+            <tr>
+                <td>
+                   
+                    
+                        <img src="{{item.drawings.drawing.url}}" alt="" id="hooy">
+                    </td>
+                    <td id="hyoo">{{item.drawings.name}}</td>
+                    <td>{{item.drawings.discription}}</td>
+                        
+               
+                    <td id="huee">{{item.quantity}}</td>
+                    <td>
+                        <small id="ytrrr">${{item.drawings.price}}</small>
+                    </td>
+                   <td>
+                    <form action="{% url 'draw:removefromcart' item.drawings.id %}" method="post"> 
+                        {% csrf_token %}
+                        <button type="submit" id="remm" style="background-color: darkgray;" >Remove</button>
+
+                    </form>
+                    
+                   </td>
+                </tr>
+            {% endfor %}
+            <tr><td><br></td></tr>
+            <tr>
+                <td>total=</td>
+                <td id="tott">${{grand_total}}</td>
+                <td id="nhh"><button style="background-color: darkgray;" id="gggiii"><a href="{% url 'draw:payment' %}" id="ytyt">Paynow</a></button></td>
+            </tr>
+              
+        </table>
+    </div>
+   
+    <div class="footer" >
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <a href="{% url 'draw:dashbord' %}">.  Dashbord</a><br><br>
+                <a href="{% url 'draw:view' %}">.  View drawings</a><br><br>
+                <a href="{% url 'draw:home' %}">.  Home</a><br><br>
+               
+            </div>
+            <div class="col-1"></div>
+        </div>
+        
+    </div>
+    {% endblock %}
+
+
+    
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</body>
+</html>

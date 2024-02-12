@@ -1,0 +1,80 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+</head>
+
+<style>
+  body{
+    padding-top: 100px;
+  }
+.main table{
+    margin-left: 450px;
+    margin-top:0px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+   
+}
+
+
+.main table td{
+    font-weight: bolder;
+    text-decoration: solid;
+    text-align: center;
+    color: black;
+   
+  
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contaier-fluid h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 40px;
+}
+
+
+ 
+</style>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRD90xyGRlhv6eBHRhMa2U9c0HpcP5KXvtwpLoQYo3aMR7hvd9bSnO-FaCvltDqSbGvNg&usqp=CAU);">
+    <div class="container-fluid"> 
+        <h1 style="text-align: center; margin-left: 40px; font-weight: bolder;">Add Drawings</h1>
+    </div>
+      <div class="main">
+        
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+               
+        <table>
+               
+            <tr>
+                <td><label for="">drawings</label></td>
+                <td><input type="file" name="drawing"><br><br></td>
+            </tr>
+            <tr>
+                <td><label for="">name</label></td>
+                <td><input type="text" name="name" id=""> <br><br></td>
+            </tr>
+            <tr>
+                <td> <label for="">price</label></td>
+                <td> <input type="number" name="price" id=""><br><br></td>
+            </tr>
+            <tr>
+                <td> <label for="">discription</label></td>
+                <td><input type="text" name="discription"></td>
+            </tr>
+            <tr><br>
+                <td></td>
+                <td> <button type="submit">ADD PRODUCT</button></td>
+            </tr>
+        </table>
+        </form>
+      </div>
+
+</body>
+</html>

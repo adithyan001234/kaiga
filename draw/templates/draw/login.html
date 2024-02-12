@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <style>
+        #riu{
+            text-decoration: none;
+            margin-top: -40px;
+        }
+        .container-fluid table{
+        
+        
+            width: 20px;
+            height: 100px;
+            
+        }
+        #jooo{
+            margin-left: 100px;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            border: 1px solid white;
+            padding: 15px;
+            font-weight: bolder;
+        }
+        #uodd{
+            width: 7cm;
+            height: 150px;
+        }
+        .login{
+            width: 500px;
+           background-color: white;
+           opacity: .9;
+           border: 5px solid whitesmoke;
+           border-radius: 5px;
+
+        }
+        .login h1{
+            text-align: center;
+            font-weight: bolder;
+        }
+        .login table td{
+            padding: 10px;
+        }
+        td{
+            font-size: large;
+            color: black;
+            font-weight: bolder;
+        }
+        
+        
+    </style>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vW8xcHHSY_ynZpV7rYvufqOSPwR8ZVpYuKUQ89REtKqKjVevkbEmskonf1n2ATo-IyE&usqp=CAU);">
+   <div class="container-fluid" >
+       <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 login" style="margin-top: 170px;"> <form action="" onsubmit="return login()" method="post">
+            {% csrf_token %}
+            <table >
+                <!-- style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOE-8UALyQFtLz1g8xVt1lia0tOXxE3DLy9WlFUK16KLwXx7Tsaa9HBmPacb6DplVMZHU&usqp=CAU);" -->
+                <tr>
+                    <td colspan="2"><h1>login</h1></td>
+                </tr>
+                <tr>
+                    <td> <label for="">email</label></td>
+                    <td> <input type="email" class="" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td> <label for="">password</label></td>
+                    <td><input type="password"  id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td> <p id="message" style="color: rgb(188, 19, 19);">{{msg}}</p></td>
+                </tr>
+                <tr>
+                    <th><button type="submit" id="jooo">submit</button></th>
+                </tr>
+            </table>
+            
+           
+            
+        </form></div>
+        <div class="col-4"></div>
+       </div>
+
+   </div>
+    <script src="{% static 'script/login.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

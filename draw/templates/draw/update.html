@@ -1,0 +1,74 @@
+{% extends 'draw/navbar.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+</head>
+<style>
+ 
+    .main table{
+        text-align: center;
+        align-items: center;
+        font-size: xx-large;
+        justify-content: center;
+        margin-left: 400px;
+    }
+    #hutt{
+        border-radius: 30px;
+    }
+    .footer{
+        height: 300px;
+        width: 100%;
+    }
+    .container-fluid{
+        height: 900px;
+    }
+</style>
+<body>
+    {% block content %}
+   
+    <div class="container-fluid" style="background-image: url(data:image/png;base64,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);height: 530px;">
+        <h1 style="text-align: center;">Edit</h1>
+        <div class="main" >
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table style="align-items: center; margin-left: 450px;">
+                    <tr>
+                        <td><label for="">drawings</label></td>
+                        <td><input type="file" name="drawing" ><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">name</label></td>
+                        <td><input type="text" name="name" id="" value="{{drw.name}}"> <br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">price</label></td>
+                        <td><input type="number" name="price" id="" value="{{drw.price}}"><br><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">discription</label></td>
+                        <td><input type="text" name="discription" value="{{drw.discription}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="hutt"><button type="submit">Update Product</button></td>
+                    </tr>
+                </table>
+        
+              
+            </form>
+
+        </div>
+        <div class="foote" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaJzlljAZItPVKP7JO0_3rXXfrGx2vevySrcFME_cmmpZaTJYOG1oOJgnhf-cjtpXb7_A&usqp=CAU);"></div>
+    
+    </div>
+{% endblock %}
+
+    
+</body>
+</html>

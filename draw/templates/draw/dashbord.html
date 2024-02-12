@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/dashbord.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  .container-fluid{
+    background-color: rgb(194, 194, 194);
+  }
+#rop{
+  text-align: center;
+  margin-right: 50px;
+}
+.container-fluid img{
+  width: 100px;
+  height: 100%;
+}
+.container-fluid button{
+  width: 100px;
+  height: 100px;
+  
+  border-color:  rgb(194, 194, 194);
+  background-color: rgb(194, 194, 194) ;
+  border-radius: 100px;
+  border-style: none;
+}
+.col-10{
+  color: rgb(255, 255, 255);
+}
+#wop{
+  text-decoration: none;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-style: inherit;
+}
+#roa{
+  text-align: center;
+  margin-right: 60px;
+}
+#ros{
+  text-align: center;
+  margin-right: 65px;
+}
+</style>
+<body>
+  <div class="container-fluid" style="background-image: url(https://static.vecteezy.com/system/resources/thumbnails/009/695/745/small/seamless-wavy-line-pattern-png.png);">
+    
+    <div class="row">
+      <div class="col"><h1></h1></div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-2"><button><a href="{% url 'draw:signup' %}"><img src="{% static 'images/sell.jpg' %}" alt=""></a></button></div>
+      <div class="col-5"></div>
+    </div>
+    <h4 id="rop"><a href="{% url 'draw:slogin' %}" id="wop">Become a seller</a></h4><br>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-2"><button><a href="{% url 'draw:view' %}"><img src="{% static 'images/view.png' %}" alt=""></a></button></div>
+      <div class="col-5"></div>
+    </div>
+    <h4 id="roa"><a href="{% url 'draw:view' %}" id="wop">View Drawings</a></h4><br>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-2"><button><a href="{% url 'draw:home' %}"><img src="{% static 'images/home.jpg' %}" alt=""></a></button></div>
+      <div class="col-5"></div>
+    </div>
+    <h4 id="ros"><a href="{% url 'draw:home' %}"  id="wop">home</a></h4><br>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-2"><button><a href="{% url 'draw:about' %}"><img src="{% static 'images/about.jpg' %}" alt=""></a></button></div>
+      <div class="col-5"></div>
+    </div>
+    <h4 id="ros"><a href="{% url 'draw:about' %}"  id="wop">About Us</a></h4><br>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col-2"><button><a href="{% url 'draw:cart' %}"><img src="{% static 'images/cart.png' %}" alt=""></a></button></div>
+      <div class="col-5"></div>
+    </div>
+    <h4 id="ros"><a href="{% url 'draw:about' %}"  id="wop">Cart</a></h4><br>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione laboriosam asperiores reprehenderit praesentium amet harum rem soluta maxime animi excepturi illo temporibus ducimus incidunt aut explicabo deleniti sapiente, natus nostrum eius quisquam magnam optio officiis. Vel repellat ipsa atque pariatur obcaecati totam sed itaque esse, laborum reprehenderit, sint natus.</div>
+      <div class="co1-1"></div>
+    </div><br>
+    
+
+  
+    
+
+  
+    
+    
+
+  
+    
+ 
+  
+
+
+    <a href="{% url 'draw:logout' %}">logout</a>
+
+
+
+
+  </div>
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
